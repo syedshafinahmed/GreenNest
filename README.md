@@ -86,11 +86,10 @@ If the user is not logged in → Redirects to Login and then back to Details Pag
 
 ## Authentication (Firebase)
 
-
-  <img width="full" alt="Greennest-Register" src="https://github.com/user-attachments/assets/2ae9414b-45dd-46f7-ba23-da59945ea67c" /> &nbsp;&nbsp;
-  <img width="full" alt="Greennest-Login" src="https://github.com/user-attachments/assets/d099bd60-fff0-47fa-afaa-f769e38df4db" />  
-
-
+<div align="center">
+  <img alt="Greennest-Register" src="https://github.com/user-attachments/assets/2ae9414b-45dd-46f7-ba23-da59945ea67c" style="width: 45%"  /> &nbsp;&nbsp;
+  <img alt="Greennest-Login" src="https://github.com/user-attachments/assets/d099bd60-fff0-47fa-afaa-f769e38df4db" style="width: 45%"  />  
+</div>
 
 
 - **Email/Password Login**
