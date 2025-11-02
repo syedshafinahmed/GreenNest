@@ -105,7 +105,7 @@ npm run build
 
 ## Profile Page
 
-<div align="center">
+<div align="center" style="width: 100%">
   <img alt="Greennest-Profile" src="https://github.com/user-attachments/assets/8e5ca97a-a3d3-4d6d-aa7c-ac5c4b68a0fb" style="width: 32%" /> &nbsp;&nbsp;
   <img alt="Greennest-Profile-Edit" src="https://github.com/user-attachments/assets/761e8686-a02e-471c-ab7e-ec716dfe5ddb" style="width: 32%" /> &nbsp;&nbsp;
   <img alt="Greennest-Profile-Update" src="https://github.com/user-attachments/assets/e9b604cd-5b62-43b2-9454-654a22ab95ff" style="width: 32%" />
