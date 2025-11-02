@@ -49,21 +49,19 @@ npm run build
 
 ## Home Page
 
-<img width="full" alt="GreenNest-Home" src="https://github.com/user-attachments/assets/da02b670-35f8-4a22-b42b-41518ed70ebb" /> <br>
+<img width="full" alt="Greennest-Home" src="https://github.com/user-attachments/assets/02135f80-69b0-46c2-a716-959d1377e5bd" /><br>
 
 - Nature-inspired hero slider using **Swiper.js**.
 - **Top Rated Indoor Plants** section displaying plants dynamically from JSON.
 - **Plant Care Tips** for proper sunlight, watering, and fertilizer schedules.
 - **Meet Our Green Experts** showcasing plant specialists.
+- **Plant of the Week** showcasing Plant of the Week.
 
 ---
 
 ## Plants Page
 
-<div align="center">
-   <img width="450" alt="GreenNest-Plants" src="https://github.com/user-attachments/assets/2b6ba4a5-53ed-4981-8614-366923349e84" />&nbsp;&nbsp;
-   <img width="450" alt="GreenNest-Plant-Search" src="https://github.com/user-attachments/assets/9127d4cf-9785-467a-92f0-f3a1cc2b66db" />
-</div>
+<img width="full" alt="Greennest-Plants" src="https://github.com/user-attachments/assets/d3bb5354-e6e3-4111-ada4-6766822426e8" />
 <br>
 
 - Displays all plant data from **plants.json**.
