@@ -87,8 +87,8 @@ npm run build
 ## Authentication (Firebase)
 
 <div align="center">
-  <img alt="Greennest-Register" src="https://github.com/user-attachments/assets/2ae9414b-45dd-46f7-ba23-da59945ea67c" style="width: 48%"  /> &nbsp;&nbsp;
-  <img alt="Greennest-Login" src="https://github.com/user-attachments/assets/d099bd60-fff0-47fa-afaa-f769e38df4db" style="width: 48%"  />  
+  <img alt="Greennest-Register" src="https://github.com/user-attachments/assets/2ae9414b-45dd-46f7-ba23-da59945ea67c" style="width: 44%"  /> &nbsp;&nbsp;
+  <img alt="Greennest-Login" src="https://github.com/user-attachments/assets/d099bd60-fff0-47fa-afaa-f769e38df4db" style="width: 44%"  />  
 </div> <br>
 
 - **Email/Password Login**
