@@ -17,7 +17,6 @@ https://greennest-ssa.web.app
 
 ```
 git clone https://github.com/syedshafinahmed/GreenNest
-
 ```
 
 #### 2. Navigate into the project directory
@@ -50,99 +49,93 @@ npm run build
 
 ## Home Page
 
-<img width="full" alt="Zappify-Home" src="https://github.com/user-attachments/assets/da02b670-35f8-4a22-b42b-41518ed70ebb" /> <br>
+<img width="full" alt="GreenNest-Home" src="https://github.com/user-attachments/assets/da02b670-35f8-4a22-b42b-41518ed70ebb" /> <br>
 
-- Engaging banner with centered heading and **Play Store & App Store** buttons.
-- Dynamic state cards showcasing platform statistics.
-- **Trending Apps** grid (8 featured apps) with ratings and download counts.
-- **Show All** button to navigate to the All Apps Page.
-- Includes a **Contribute** button linking directly to my GitHub profile.
+- Nature-inspired hero slider using **Swiper.js**.
+- **Top Rated Indoor Plants** section displaying plants dynamically from JSON.
+- **Plant Care Tips** for proper sunlight, watering, and fertilizer schedules.
+- **Meet Our Green Experts** showcasing plant specialists.
 
 ---
 
-## Apps Page
+## Plants Page
 
 <div align="center">
-   <img height="450" alt="Zappify-Apps" src="https://github.com/user-attachments/assets/2b6ba4a5-53ed-4981-8614-366923349e84" />&nbsp;&nbsp;
-   <img height="450" alt="Zappify-Apps-Search" src="https://github.com/user-attachments/assets/9127d4cf-9785-467a-92f0-f3a1cc2b66db" />
+   <img width="450" alt="GreenNest-Plants" src="https://github.com/user-attachments/assets/2b6ba4a5-53ed-4981-8614-366923349e84" />&nbsp;&nbsp;
+   <img width="450" alt="GreenNest-Plant-Search" src="https://github.com/user-attachments/assets/9127d4cf-9785-467a-92f0-f3a1cc2b66db" />
 </div>
- <br>
+<br>
 
-- Displays all available apps **dynamically**.
-- Real-time live search (case-insensitive).
-- Displays total number of apps dynamically.
-- No App Found message for unmatched queries.
-- Clicking any app card redirects to its **App Details Page**, where detailed information and reviews are displayed.
-
----
-
-## App Details Page
-
-<img width="full" alt="Zappify-App-Details" src="https://github.com/user-attachments/assets/0ba94a04-d19e-40cb-8e61-07deb283b4d1" /> <br>
-
-- Detailed layout featuring app image, title, rating, reviews, and downloads.
-- Install button:
-  - Changes to **Installed** upon click.
-  - Disables automatically.
-  - Displays success toast notification.
-  - Saves to LocalStorage.
-- Responsive bar chart created with Recharts showing rating distribution.
+- Displays all plant data from **plants.json**.
+- Includes plant **image, name, price, category, rating**.
+- **View Details** redirects to **Plant Details Page** (Protected Route).
+- Responsive card layout.
 
 ---
 
-## Installation Page
+## Plant Details Page (Protected Route)
 
-<img width="full" alt="Zappify-Installation" src="https://github.com/user-attachments/assets/adb050f0-03ba-49ed-bad0-53d6f896d5e5" /> <br>
+<img width="full" alt="GreenNest-Plant-Details" src="https://github.com/user-attachments/assets/0ba94a04-d19e-40cb-8e61-07deb283b4d1" /> <br>
 
-- Displays all installed apps from **LocalStorage**.
-- Uninstall button removes apps instantly + shows confirmation toast.
-- Supports sorting by download count (High–Low / Low–High).
+- Only accessible when **logged in**.
+- Shows **full plant details** including care instructions and provider.
+- **Book Consultation Form** with Name + Email input.
+- Shows success toast on booking.
+
+If the user is not logged in → Redirects to Login and then back to Details Page after login.
 
 ---
 
-## Error & Loading States
+## Authentication (Firebase)
 
-<div align="center">
-   <img height="200" alt="Zappify-Page-not-found" src="https://github.com/user-attachments/assets/654cd20d-7c67-4a22-89db-a88f5467e372" />&nbsp;&nbsp;
-   <img height="200" alt="Zappify-App-not-Found" src="https://github.com/user-attachments/assets/382d420a-3cb3-43bf-a450-9385798996b7" />&nbsp;&nbsp;
-   <img height="200"alt="Zappify-Search-not-Found" src="https://github.com/user-attachments/assets/a8e0d9db-4598-4bd8-9f53-3311c972e0de" />
-</div> <br>
+- **Email/Password Login**
+- **Google Sign-In**
+- **Signup with Name, Email, Photo URL**
+- **Forgot Password → Reset Link to Gmail**
+- **Password Validation:**
+  - At least one uppercase letter
+  - At least one lowercase letter
+  - Minimum length: 6 characters
+- Displays toast messages for errors & success states.
 
-- Custom 404 Error Page for invalid routes.
-- Loading animations during:
-  - Page transitions.
-  - Search operations.
-- Graceful **App Not Found** UI for missing app details.
+---
+
+## My Profile Page
+
+<img width="full" alt="GreenNest-Profile" src="https://github.com/user-attachments/assets/adb050f0-03ba-49ed-bad0-53d6f896d5e5" /> <br>
+
+- Shows **Name, Email, Photo** of logged-in user.
+- **Update Profile** feature using `updateProfile()` to change name or photo.
+- Real-time UI updates after profile change.
 
 ---
 
 ## 🧰 Tech Stack
 
-Zappify is built using a modern front-end tech stack focused on performance, scalability, and responsiveness.
-Each tool plays a key role in ensuring a smooth user experience and maintainable codebase.
-
-| 🏷️ **Category**        | ⚙️ **Technology Used**                                                                   |
-| ---------------------- | ---------------------------------------------------------------------------------------- |
-| **Library**            | [React.js](https://react.dev/)                                                           |
-| **Styling**            | [Tailwind CSS](https://tailwindcss.com/)                                                 |
-| **UI Components**      | [daisyUI](https://daisyui.com/)                                                          |
-| **Routing**            | [React Router](https://reactrouter.com/)                                                 |
-| **Charts**             | [Recharts](https://recharts.org/en-US/)                                                  |
-| **Loading Animations** | [React Spinners](https://www.davidhu.io/react-spinners/)                                 |
-| **State Management**   | React Hooks (`useState()`, `useEffect()`, `useNavigate()`, `useLoaderData()`)            |
-| **Data Persistence**   | [LocalStorage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) |
-| **Deployment**         | [Netlify](https://www.netlify.com/)                                                      |
+| 🏷️ **Category**         | ⚙️ **Technology Used**                                                                                           |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Library**             | [React.js](https://react.dev/)                                                                                   |
+| **Styling**             | [Tailwind CSS](https://tailwindcss.com/) + [daisyUI](https://daisyui.com/)                                       |
+| **Routing**             | [React Router](https://reactrouter.com/)                                                                         |
+| **Authentication**      | [Firebase Authentication](https://firebase.google.com/docs/auth)                                                 |
+| **Data Source**         | Local JSON (`plants.json`)                                                                                       |
+| **Animations / Slider** | [Framer Motion](https://www.framer.com/motion/) / [Swiper.js](https://swiperjs.com/)                             |
+| **Toasts**              | [React Toastify](https://fkhadra.github.io/react-toastify/introduction)                                          |
+| **State Management**    | React Hooks (`useState`, `useEffect`, `useContext`)                                                              |
+| **Deployment**          | [Firebase Hosting](https://firebase.google.com/docs/hosting) / [Cloudflare Pages](https://pages.cloudflare.com/) |
 
 ---
 
 ## 🔧 Highlights
 
-- Fully responsive.
-- Persistent installs using LocalStorage.
+- Fully **responsive** & performance optimized.
+- **Protected Routes** with AuthGuard / PrivateRoute.
+- Real-time profile updates using Firebase.
 - Toast notifications for user actions.
-- Active route highlighting in navbar.
-- Custom footer & 404 error page.
-- Works flawlessly on reload (no 404 on Netlify routes).
+- Clean, minimal UI with smooth transitions.
+- No reload or crash errors on route navigation.
+
+---
 
 <!-- ## 🌐 Live Demo
 
