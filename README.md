@@ -1,4 +1,4 @@
-# <img width="30px" src="src/assets/leaves.png" /> GreenNest – Indoor Plant Care & Store
+# <img width="27px" src="src/assets/leaves.png" /> GreenNest – Indoor Plant Care & Store
 
 GreenNest – An elegant single-page web application built for plant lovers who want to nurture and decorate their homes with healthy indoor plants. The platform allows users to explore plant care guides, buy plants, and book expert consultations — ensuring a greener and healthier living space during any season.
 
@@ -6,8 +6,7 @@ GreenNest – An elegant single-page web application built for plant lovers who 
 
 ## 🌐 Live Demo
 
-https://greennest-syedshafinahmed.pages.dev/ <br/>
-https://greennest-ssa.web.app
+https://greennest-ssa.web.app 
 
 ---
 
@@ -61,8 +60,8 @@ npm run build
 
 ## Plants Page
 
-<img width="full" alt="Greennest-Plants" src="https://github.com/user-attachments/assets/d3bb5354-e6e3-4111-ada4-6766822426e8" />
-<br>
+<img width="full" alt="Greennest-Plants" src="https://github.com/user-attachments/assets/d3bb5354-e6e3-4111-ada4-6766822426e8" /><br>
+
 
 - Displays all plant data from **plants.json**.
 - Includes plant **image, name, price, category, rating**.
@@ -73,24 +72,24 @@ npm run build
 
 ## Plant Details Page (Protected Route)
 
-<img width="full" alt="GreenNest-Plant-Details" src="https://github.com/user-attachments/assets/0ba94a04-d19e-40cb-8e61-07deb283b4d1" /> <br>
+<img width="full" alt="Greennest-PlantDetails" src="https://github.com/user-attachments/assets/ed5ce3ba-3b8e-408d-8ab5-8dcd1acaa10d" /> <br>
 
 - Only accessible when **logged in**.
 - Shows **full plant details** including care instructions and provider.
 - **Book Consultation Form** with Name + Email input.
-- Shows success toast on booking.
+- On successful booking, a confirmation toast is displayed and the form resets automatically.
 
-If the user is not logged in → Redirects to Login and then back to Details Page after login.
+
+*If the user is not logged in → Redirects to Login and then back to Details Page after login.*
 
 ---
 
 ## Authentication (Firebase)
 
 <div align="center">
-  <img alt="Greennest-Register" src="https://github.com/user-attachments/assets/2ae9414b-45dd-46f7-ba23-da59945ea67c" style="width: 45%"  /> &nbsp;&nbsp;
-  <img alt="Greennest-Login" src="https://github.com/user-attachments/assets/d099bd60-fff0-47fa-afaa-f769e38df4db" style="width: 45%"  />  
-</div>
-
+  <img alt="Greennest-Register" src="https://github.com/user-attachments/assets/2ae9414b-45dd-46f7-ba23-da59945ea67c" style="width: 48%"  /> &nbsp;&nbsp;
+  <img alt="Greennest-Login" src="https://github.com/user-attachments/assets/d099bd60-fff0-47fa-afaa-f769e38df4db" style="width: 48%"  />  
+</div> <br>
 
 - **Email/Password Login**
 - **Google Sign-In**
@@ -104,9 +103,15 @@ If the user is not logged in → Redirects to Login and then back to Details Pag
 
 ---
 
-## My Profile Page
+## Profile Page
 
-<img width="full" alt="GreenNest-Profile" src="https://github.com/user-attachments/assets/adb050f0-03ba-49ed-bad0-53d6f896d5e5" /> <br>
+<div>
+  <img alt="Greennest-Profile" src="https://github.com/user-attachments/assets/8e5ca97a-a3d3-4d6d-aa7c-ac5c4b68a0fb" style="width: 32%" /> &nbsp;&nbsp;
+  <img alt="Greennest-Profile-Edit" src="https://github.com/user-attachments/assets/761e8686-a02e-471c-ab7e-ec716dfe5ddb" style="width: 32%" /> &nbsp;&nbsp;
+  <img alt="Greennest-Profile-Update" src="https://github.com/user-attachments/assets/e9b604cd-5b62-43b2-9454-654a22ab95ff" style="width: 32%" />
+</div>
+
+<br>
 
 - Shows **Name, Email, Photo** of logged-in user.
 - **Update Profile** feature using `updateProfile()` to change name or photo.
@@ -122,9 +127,9 @@ If the user is not logged in → Redirects to Login and then back to Details Pag
 | **Styling**             | [Tailwind CSS](https://tailwindcss.com/) + [daisyUI](https://daisyui.com/)                                       |
 | **Routing**             | [React Router](https://reactrouter.com/)                                                                         |
 | **Authentication**      | [Firebase Authentication](https://firebase.google.com/docs/auth)                                                 |
-| **Data Source**         | Local JSON (`plants.json`)                                                                                       |
-| **Animations / Slider** | [Framer Motion](https://www.framer.com/motion/) / [Swiper.js](https://swiperjs.com/)                             |
+| **Animations / Slider** | [Swiper.js](https://swiperjs.com/)                                                                               |
 | **Toasts**              | [React Toastify](https://fkhadra.github.io/react-toastify/introduction)                                          |
+| **Data Source**         | Local JSON (`plants.json`)                                                                                       |
 | **State Management**    | React Hooks (`useState`, `useEffect`, `useContext`)                                                              |
 | **Deployment**          | [Firebase Hosting](https://firebase.google.com/docs/hosting) / [Cloudflare Pages](https://pages.cloudflare.com/) |
 
@@ -133,16 +138,10 @@ If the user is not logged in → Redirects to Login and then back to Details Pag
 ## 🔧 Highlights
 
 - Fully **responsive** & performance optimized.
-- **Protected Routes** with AuthGuard / PrivateRoute.
+- **Protected Routes** with PrivateRoute.
 - Real-time profile updates using Firebase.
 - Toast notifications for user actions.
 - Clean, minimal UI with smooth transitions.
 - No reload or crash errors on route navigation.
 
 ---
-
-<!-- ## 🌐 Live Demo
-
-https://greennest-syedshafinahmed.pages.dev/ or https://greennest-ssa.web.app
-
---- -->
