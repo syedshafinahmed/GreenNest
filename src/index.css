@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #403F3F;
+  --color-secondary: #23751a;
+  --color-base-200: #F3F3F3;
+  --color-base-300: #E7E7E7;
+  --color-accent: #706F6F;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav .active {
+  /* color: #65A30D; */
+  font-weight: bold;
+  padding: 7px 15px;
+  background: linear-gradient(to right, #047857, #65A30D);
+  color: white;
+  border-radius: 2px;
+  /* border-bottom: 3px solid #65A30D; */
+}
+
+/* nav .active {
+  color: #65A30D;
+  font-weight: bold;
+  border-bottom: 3px solid #65A30D;
+} */
