@@ -48,7 +48,9 @@ npm run build
 
 ## Home Page
 
-<img width="full" alt="Greennest-Home" src="https://github.com/user-attachments/assets/02135f80-69b0-46c2-a716-959d1377e5bd" /><br>
+<img width="full" alt="Greennest-Home" src="https://github.com/user-attachments/assets/5dde2c25-5f8f-4466-bbd7-2dd650842595" /><br>
+<!-- <img width="1351" height="3689" alt="greennest-syedshafinahmed pages dev_" src="https://github.com/user-attachments/assets/5dde2c25-5f8f-4466-bbd7-2dd650842595" /> -->
+
 
 - Nature-inspired hero slider using **Swiper.js**.
 - **Top Rated Indoor Plants** section displaying plants dynamically from JSON.
