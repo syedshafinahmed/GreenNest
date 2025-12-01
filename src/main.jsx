@@ -41,9 +41,9 @@ const router = createBrowserRouter([
         path: "/plants/:id",
         element:
           <Suspense fallback={<span className='fixed inset-0 flex justify-center items-center bg-white z-50'><FadeLoader color="#047857" size={100} /></span>}>
-            <PrivateRoute>
+            {/* <PrivateRoute> */}
               <PlantDetails dataPromise={dataPromise}></PlantDetails>
-            </PrivateRoute>
+            {/* </PrivateRoute> */}
           </Suspense>,
         hydrateFallbackElement: <Loading></Loading>
       },

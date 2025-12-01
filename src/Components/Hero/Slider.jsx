@@ -4,19 +4,22 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import '../Hero/Slider.css';
 const Slider = ({ data }) => {
   return (
     <div className='mt-13'>
       <main>
-        <div className='max-w-7xl mx-auto py-10 px-5'>
-          <Swiper className="slider" modules={[Pagination]}
-            spaceBetween={50}
+        <div className='max-w-7xl h-[70vh] mx-auto pt-4 mb-30 px-5'>
+          <Swiper className="slider" modules={[Pagination, Autoplay]}
+            spaceBetween={20}
             slidesPerView={4}
-            navigation
             pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
             breakpoints={{
               320: {
                 slidesPerView: 1,
