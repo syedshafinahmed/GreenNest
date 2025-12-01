@@ -10,7 +10,7 @@ const TopRated = ({ data }) => {
   const handleDetails = (plantId) => {
     navigate(`/plants/${plantId}`);
   }
-
+  
   return (
     <div className='max-w-7xl mx-auto py-30'>
       <h1 className='font-bold text-xl md:text-2xl text-center'>Top Rated Indoor Plants</h1>

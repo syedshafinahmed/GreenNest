@@ -1,6 +1,8 @@
-import { StrictMode, Suspense } from 'react'
+import { StrictMode, Suspense, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+import './index.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Root from './Components/Root/Root.jsx';
@@ -42,7 +44,7 @@ const router = createBrowserRouter([
         element:
           <Suspense fallback={<span className='fixed inset-0 flex justify-center items-center bg-white z-50'><FadeLoader color="#047857" size={100} /></span>}>
             {/* <PrivateRoute> */}
-              <PlantDetails dataPromise={dataPromise}></PlantDetails>
+            <PlantDetails dataPromise={dataPromise}></PlantDetails>
             {/* </PrivateRoute> */}
           </Suspense>,
         hydrateFallbackElement: <Loading></Loading>
