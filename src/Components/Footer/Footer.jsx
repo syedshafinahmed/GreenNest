@@ -1,6 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram } from 'react-icons/fa';
-import { PiPinterestLogo } from 'react-icons/pi';
+import { FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
 import leaves from '../../assets/leaves.png'
 const Footer = () => {
   return (
@@ -29,14 +28,14 @@ const Footer = () => {
         <div>
           <h3 className='text-2xl md:text-3xl font-semibold mb-3'>Follow Us</h3>
           <div className='flex justify-center md:justify-start gap-5'>
-            <a href="#" className="hover:scale-110 transition-transform duration-200">
-              <FaInstagram size={30} />
+            <a href="https://github.com/syedshafinahmed" className="hover:scale-110 transition-transform duration-200">
+              <FaGithub size={30} />
             </a>
-            <a href="#" className="hover:scale-110 transition-transform duration-200">
-              <FaFacebookF size={30} />
+            <a href="https://www.linkedin.com/in/syed-shafin-ahmed/" className="hover:scale-110 transition-transform duration-200">
+              <FaLinkedin size={30} />
             </a>
-            <a href="#" className="hover:scale-110 transition-transform duration-200">
-              <PiPinterestLogo size={30} />
+            <a href="https://syedshafinahmed.pages.dev/" className="hover:scale-110 transition-transform duration-200">
+              <FaGlobe size={30} />
             </a>
           </div>
         </div>
