@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const links =
     <>
-      <nav className='flex gap-x-10 justify-center items-center '>
+      <nav className='flex gap-x-8 justify-center items-center '>
         <NavLink className="hover:scale-105 transition text-xs md:text-sm" to='/'>Home</NavLink>
         <NavLink className="hover:scale-105 transition text-xs md:text-sm" to='/plants'>Plants</NavLink>
         <NavLink className="hover:scale-105 transition text-xs md:text-sm" to='/about-us'>About Us</NavLink>

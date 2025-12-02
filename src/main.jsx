@@ -1,4 +1,4 @@
-import { StrictMode, Suspense, useEffect } from 'react'
+import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css';
 import AOS from 'aos';
@@ -14,7 +14,7 @@ import Register from './Components/Register/Register.jsx';
 import { FadeLoader } from 'react-spinners';
 import AuthProvider from './Components/Provider/AuthProvider.jsx';
 import PlantDetails from './Components/PlantDetails/PlantDetails.jsx';
-import PrivateRoute from './Components/PrivateRoute/PrivateRoute.jsx';
+// import PrivateRoute from './Components/PrivateRoute/PrivateRoute.jsx';
 import Loading from './Components/Loading/Loading.jsx';
 import AboutUs from './Components/AboutUs/AboutUs.jsx';
 import Contact from './Components/Contact/Contact.jsx';
