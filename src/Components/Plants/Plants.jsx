@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { FaCreditCard } from 'react-icons/fa';
+import { FaTag } from 'react-icons/fa';
 import { IoIosStar } from 'react-icons/io';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
@@ -40,7 +40,7 @@ const Plants = ({ dataPromise }) => {
                 </p>
                 <div className='flex justify-between items-center py-4'>
                   <span className='flex items-center text-xs badge badge-xs py-2 text-emerald-700 bg-white border-emerald-700 font-medium gap-x-2'>
-                    <FaCreditCard /> {toprated.price}
+                    <FaTag /> {toprated.price}
                   </span>
                   <span className='flex items-center text-xs badge badge-xs py-2 text-lime-600 bg-white border-lime-600 font-medium gap-x-2'>
                     <IoIosStar /> {toprated.rating}

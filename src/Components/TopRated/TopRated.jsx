@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCreditCard } from 'react-icons/fa';
+import { FaTag } from 'react-icons/fa';
 import { IoIosStar } from 'react-icons/io';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
@@ -10,9 +10,9 @@ const TopRated = ({ data }) => {
   const handleDetails = (plantId) => {
     navigate(`/plants/${plantId}`);
   }
-  
+
   return (
-    <div className='max-w-7xl mx-auto py-30'>
+    <div data-aos="fade-right" className='max-w-7xl mx-auto py-30'>
       <h1 className='font-bold text-xl md:text-4xl text-center'>Top Rated Indoor Plants</h1>
       <div className='flex flex-col md:flex-row justify-center items-center gap-5 py-10'>
         {
@@ -38,7 +38,7 @@ const TopRated = ({ data }) => {
                 <p className='font-bold text-xl py-4'>{toprated.plantName}</p>
                 <div className='flex justify-between items-center pb-5'>
                   <span className='flex items-center text-xs badge text-emerald-700 bg-white border-emerald-700 font-medium gap-x-2'>
-                    <FaCreditCard /> {toprated.price}
+                    <FaTag /> {toprated.price}
                   </span>
                   <span className='flex items-center text-xs badge text-lime-600 bg-white border-lime-600 font-medium gap-x-2'>
                     <IoIosStar /> {toprated.rating}

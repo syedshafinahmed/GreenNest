@@ -26,7 +26,7 @@ const PlantWeek = ({ data }) => {
   return (
     <div
       data-aos="fade-right"
-      className="max-w-7xl mx-auto px-5 py-20 bg-gray-200 rounded-sm"
+      className="max-w-7xl mx-auto px-5 py-10 mb-60 bg-gray-200 rounded-sm"
     >
       <div className="mb-10">
         <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900">
