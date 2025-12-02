@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
 import leaves from '../../assets/leaves.png'
+import { Link } from 'react-router';
 const Footer = () => {
   return (
     <div className='bg-linear-to-r from-emerald-700 to-lime-600 text-white py-10'>
@@ -19,9 +20,9 @@ const Footer = () => {
         <div>
           <h3 className='text-2xl md:text-3xl font-semibold mb-3'>Quick Links</h3>
           <ul className="space-y-2">
-            <li className='hover:text-lime-200 transition cursor-pointer'>About</li>
-            <li className='hover:text-lime-200 transition cursor-pointer'>Contact</li>
-            <li className='hover:text-lime-200 transition cursor-pointer'>Privacy Policy</li>
+            <Link to='/about-us' className='hover:text-lime-200 transition cursor-pointer'>About Us</Link>
+            <Link to='/contact' className='hover:text-lime-200 transition cursor-pointer'>Contact</Link>
+            <Link className='hover:text-lime-200 transition cursor-pointer'>Privacy Policy</Link>
           </ul>
         </div>
 

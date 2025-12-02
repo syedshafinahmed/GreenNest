@@ -35,7 +35,7 @@ const GreenExpert = () => {
       duration: 1000,
       once: false,
     });
-    AOS.refresh(); 
+    AOS.refresh();
   }, []);
 
   return (
@@ -46,14 +46,20 @@ const GreenExpert = () => {
           {experts.map(expert => (
             <div
               key={expert.id}
-              className='px-5 flex flex-col items-center hover:scale-102 transition'
-              data-aos="fade-right" 
+              className='px-5 flex flex-col items-center'
+              data-aos="fade-right"
             >
-              <img
-                className='rounded-full w-62 border border-emerald-700 border-rounded'
-                src={expert.image}
-                alt={expert.name}
-              />
+              <div
+                className="w-62 h-62 rounded-full border border-emerald-700 overflow-hidden flex items-center justify-center"
+                data-aos="zoom-in"
+              >
+                <img
+                  src={expert.image}
+                  alt={expert.name}
+                  className="w-full h-full object-cover transition-transform duration-300 ease-out hover:scale-110"
+                />
+              </div>
+
               <p className='font-bold text-xl text-center mt-3 md:mt-5 bg-linear-to-r from-emerald-700 to-lime-600 bg-clip-text text-transparent'>
                 {expert.name}
               </p>

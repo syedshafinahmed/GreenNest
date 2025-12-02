@@ -22,6 +22,8 @@ const Navbar = () => {
       <nav className='flex gap-x-10 justify-center items-center '>
         <NavLink className="hover:scale-105 transition text-xs md:text-sm" to='/'>Home</NavLink>
         <NavLink className="hover:scale-105 transition text-xs md:text-sm" to='/plants'>Plants</NavLink>
+        <NavLink className="hover:scale-105 transition text-xs md:text-sm" to='/about-us'>About Us</NavLink>
+        <NavLink className="hover:scale-105 transition text-xs md:text-sm" to='/contact'>Contact</NavLink>
         {
           user && <>
             <NavLink className="hover:scale-105 transition text-xs md:text-sm" to='/profile'>Profile</NavLink></>

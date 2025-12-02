@@ -16,6 +16,8 @@ import AuthProvider from './Components/Provider/AuthProvider.jsx';
 import PlantDetails from './Components/PlantDetails/PlantDetails.jsx';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute.jsx';
 import Loading from './Components/Loading/Loading.jsx';
+import AboutUs from './Components/AboutUs/AboutUs.jsx';
+import Contact from './Components/Contact/Contact.jsx';
 
 const dataPromise = fetch('/plants.json').then(res => res.json());
 const router = createBrowserRouter([
@@ -60,6 +62,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         Component: Register
+      },
+      {
+        path: "/about-us",
+        Component: AboutUs
+      },
+      {
+        path: "/contact",
+        Component: Contact
       },
 
     ]
