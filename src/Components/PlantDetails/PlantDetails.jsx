@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { toast } from 'react-toastify';
 import { motion } from "framer-motion";
-import { FaLeaf, FaStar, FaStoreAlt, FaTint } from 'react-icons/fa';
+import { FaBoxOpen, FaLeaf, FaStar, FaStoreAlt, FaTag, FaTint } from 'react-icons/fa';
 import { GiFertilizerBag } from "react-icons/gi";
 import { RiVoiceprintFill } from "react-icons/ri";
 import { MdCategory } from "react-icons/md";
-import { ImPriceTags } from "react-icons/im";
-import { IoMdCart } from 'react-icons/io';
 
 
 const PlantDetails = ({ dataPromise }) => {
@@ -76,9 +74,9 @@ const PlantDetails = ({ dataPromise }) => {
             { label: "Slogan", icon: <RiVoiceprintFill />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
             { label: "Provider", icon: <FaStoreAlt />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
             { label: "Category", icon: <MdCategory />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
-            { label: "Price", icon: <ImPriceTags />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
+            { label: "Price", icon: <FaTag />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
             { label: "Rating", icon: <FaStar />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
-            { label: "Stock", icon: <IoMdCart /> , color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
+            { label: "Stock", icon: <FaBoxOpen /> , color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
           ].map((tab, index) => (
             <button
               key={index}
