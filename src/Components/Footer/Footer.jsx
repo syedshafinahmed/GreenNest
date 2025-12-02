@@ -20,6 +20,8 @@ const Footer = () => {
         <div>
           <h3 className='text-2xl md:text-3xl font-semibold mb-3'>Quick Links</h3>
           <ul className="space-y-2 flex flex-col">
+            <Link to='/' className='hover:text-lime-200 transition cursor-pointer'>Home</Link>
+            <Link to='/plants' className='hover:text-lime-200 transition cursor-pointer'>Plants</Link>
             <Link to='/about-us' className='hover:text-lime-200 transition cursor-pointer'>About Us</Link>
             <Link to='/contact' className='hover:text-lime-200 transition cursor-pointer'>Contact</Link>
             <Link className='hover:text-lime-200 transition cursor-pointer'>Privacy Policy</Link>

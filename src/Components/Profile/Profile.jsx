@@ -1,78 +1,141 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { FaEdit } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Profile = () => {
-  const { user } = useContext(AuthContext);
+  const { user, setUser, loading } = useContext(AuthContext);
 
-  const [name, setName] = useState(user?.displayName || "");
-  const [photo, setPhoto] = useState(user?.photoURL || "");
+  const [currentUser, setCurrentUser] = useState(null);
+  const [name, setName] = useState("");
+  const [photo, setPhoto] = useState("");
 
+  useEffect(() => {
+    if (user) {
+      setCurrentUser(user);
+      setName(user.displayName || "");
+      setPhoto(user.photoURL || "");
+    }
+  }, [user]);
 
-  const [editing, setEditing] = useState(false);
-
-
-  const [currentUser, setCurrentUser] = useState(user);
-
-  if (!user) {
+  if (loading || !currentUser) {
     return (
       <div className="h-screen flex justify-center items-center">
-        <p className="text-xl text-gray-600">Please log in to view your profile.</p>
+        <p className="text-xl text-gray-600">Loading profile...</p>
       </div>
     );
-  };
+  }
 
-
-  const handleUpdate = (e) => {
+  const handleUpdate = async (e) => {
     e.preventDefault();
-    updateProfile(user, {
-      displayName: name,
-      photoURL: photo,
-    })
-      .then(() => {
-        setCurrentUser({ ...user, displayName: name, photoURL: photo });
-        toast.success("Profile updated successfully!");
-        setEditing(false);
-      })
-      .catch(() => {
-        toast.error("Failed to update profile!");
+
+    try {
+      await updateProfile(currentUser, {
+        displayName: name,
+        photoURL: photo,
       });
+
+      const updatedUser = {
+        ...currentUser,
+        displayName: name,
+        photoURL: photo,
+      };
+
+      setCurrentUser(updatedUser);
+      setUser(updatedUser);
+
+      toast.success("Profile updated successfully!");
+    } catch (err) {
+      toast.error("Failed to update profile!");
+    }
   };
 
   return (
-    <div className="max-w-sm mx-auto m-30 p-8 bg-white shadow-lg rounded-2xl border border-emerald-700 relative">
-      <button onClick={() => setEditing(!editing)} className="absolute top-4 right-4 text-emerald-700 hover:text-lime-600 transition" title="Edit Profile"><FaEdit size={35} /></button>
+    <motion.div
+      className="max-w-7xl mx-auto mt-10 mb-40 p-10 bg-white rounded-3xl shadow-xl"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
+      <h1 className="text-4xl font-black mb-12 text-emerald-700">
+        Profile Dashboard
+      </h1>
 
-      <h1 className="text-3xl font-black text-center mb-6 bg-linear-to-r from-emerald-700 to-lime-600 bg-clip-text text-transparent">Your Profile</h1>
+      <div className="w-full flex flex-col md:flex-row gap-14">
 
-      <div className="flex flex-col items-center space-y-4 mb-6">
-        {currentUser.photoURL && (
-          <img src={currentUser.photoURL} alt="Profile" className="w-44 rounded-full object-cover border-4 border-emerald-700" />
-        )}
+        <motion.div
+          className="bg-white shadow-lg w-1/3 rounded-2xl"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          <motion.img
+            src={
+              currentUser.photoURL ||
+              "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            }
+            className="w-96 h-80 rounded-xl object-cover border-2 border-emerald-700 shadow-lg"
+            alt="Profile"
+            referrerPolicy="no-referrer"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 200 }}
+          />
+        </motion.div>
 
-        <div className="text-center space-y-1">
-          <p className="text-lg font-semibold">Name:{" "}<span className="font-normal">{currentUser.displayName}</span></p>
-          <p className="text-lg font-semibold">Email: <span className="font-normal">{currentUser.email}</span></p>
-        </div>
+        <motion.div
+          className="bg-white shadow-lg rounded-2xl w-full p-6"
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          <h3 className="text-2xl font-bold mb-6">Update Your Information</h3>
+
+          <form
+            className="space-y-6"
+            onSubmit={handleUpdate}
+          >
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <label className="block font-semibold">Name</label>
+              <input
+                className="w-full p-3 border border-emerald-700 rounded-lg outline-none"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                type="text"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5 }}
+            >
+              <label className="block font-semibold">Photo URL</label>
+              <input
+                className="w-full p-3 border border-emerald-700 rounded-lg outline-none"
+                value={photo}
+                onChange={(e) => setPhoto(e.target.value)}
+                type="text"
+              />
+            </motion.div>
+
+            <motion.button
+              type="submit"
+              className="w-full py-3 btn bg-emerald-600 text-white rounded-lg font-bold"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Save Changes
+            </motion.button>
+          </form>
+        </motion.div>
+
       </div>
-
-      {editing && (
-        <form onSubmit={handleUpdate} className="space-y-4">
-          <div>
-            <label className="label font-semibold">Update Name</label>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="input input-bordered w-full" />
-          </div>
-          <div>
-            <label className="label font-semibold">Update Photo URL</label>
-            <input type="text" value={photo} onChange={(e) => setPhoto(e.target.value)} className="input input-bordered w-full" />
-          </div>
-          <button type="submit" className="btn w-full bg-linear-to-r from-emerald-700 to-lime-600 text-white mt-3">Update Profile</button>
-        </form>
-      )}
-    </div>
+    </motion.div>
   );
 };
 

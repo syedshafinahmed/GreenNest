@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { toast } from 'react-toastify';
 import { motion } from "framer-motion";
-import { FaBoxOpen, FaLeaf, FaStar, FaStoreAlt, FaTag, FaTint } from 'react-icons/fa';
+import { FaBoxOpen, FaStar, FaStoreAlt, FaSun, FaTag, FaTint } from 'react-icons/fa';
 import { GiFertilizerBag } from "react-icons/gi";
 import { RiVoiceprintFill } from "react-icons/ri";
 import { MdCategory } from "react-icons/md";
@@ -76,7 +76,7 @@ const PlantDetails = ({ dataPromise }) => {
             { label: "Category", icon: <MdCategory />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
             { label: "Price", icon: <FaTag />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
             { label: "Rating", icon: <FaStar />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
-            { label: "Stock", icon: <FaBoxOpen /> , color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
+            { label: "Stock", icon: <FaBoxOpen />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
           ].map((tab, index) => (
             <button
               key={index}
@@ -131,7 +131,7 @@ const PlantDetails = ({ dataPromise }) => {
           className="relative w-full md:w-72 p-6 border border-emerald-700 flex flex-col items-center gap-4 rounded-2xl bg-base-200 shadow-lg hover:scale-105 transition-transform duration-300"
         >
           <div className="absolute -top-6 p-4 bg-white rounded-full border-2 border-emerald-700 shadow-md">
-            <FaLeaf className="text-5xl text-emerald-700" />
+            <FaSun className="text-5xl text-emerald-700" />
           </div>
           <h2 className="text-4xl font-bold mt-20 text-center text-emerald-700">
             Sunlight
