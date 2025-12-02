@@ -2,10 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { toast } from 'react-toastify';
 import { motion } from "framer-motion";
-import { FaLeaf, FaTint } from 'react-icons/fa';
+import { FaLeaf, FaStar, FaStoreAlt, FaTint } from 'react-icons/fa';
 import { GiFertilizerBag } from "react-icons/gi";
+import { RiVoiceprintFill } from "react-icons/ri";
+import { MdCategory } from "react-icons/md";
+import { ImPriceTags } from "react-icons/im";
+import { IoMdCart } from 'react-icons/io';
+
 
 const PlantDetails = ({ dataPromise }) => {
+  const [activeTab, setActiveTab] = useState("Slogan");
+
   const { id } = useParams();
   const [plant, setPlant] = useState(null);
 
@@ -41,7 +48,7 @@ const PlantDetails = ({ dataPromise }) => {
   }, [id, dataPromise]);
 
   if (!plant) {
-    return <p className="text-center py-20 text-xl">Loading plant details...</p>;
+    return <p className="text-center py-15 text-xl">Loading plant details...</p>;
   }
 
   const cardVariants = {
@@ -51,7 +58,7 @@ const PlantDetails = ({ dataPromise }) => {
 
   return (
     <div className='max-w-7xl mx-auto py-10'>
-      <div className='flex flex-col md:flex-row items-center gap-10 px-5 md:px-0'>
+      <div className='flex flex-col md:flex-row mt-10 items-center gap-10 px-5 md:px-0'>
         <img
           className='w-full md:w-1/5 h-80 md:h-96 object-cover rounded-2xl'
           src={plant.image}
@@ -63,7 +70,46 @@ const PlantDetails = ({ dataPromise }) => {
         </div>
       </div>
 
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 px-4 md:px-0">
+      <div data-aos="fade-right" className="mt-10 mx-auto px-5 py-20 md:px-0">
+        <div className="flex flex-wrap gap-5 justify-start">
+          {[
+            { label: "Slogan", icon: <RiVoiceprintFill />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
+            { label: "Provider", icon: <FaStoreAlt />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
+            { label: "Category", icon: <MdCategory />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
+            { label: "Price", icon: <ImPriceTags />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
+            { label: "Rating", icon: <FaStar />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
+            { label: "Stock", icon: <IoMdCart /> , color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
+          ].map((tab, index) => (
+            <button
+              key={index}
+              className={`px-6 py-2 font-semibold text-sm rounded-sm flex items-center gap-2 transition-transform duration-300 shadow-md
+          ${activeTab === tab.label
+                  ? `${tab.color} text-white scale-105`
+                  : "text-gray-600 border border-emerald-700 bg-white hover:scale-105 hover:shadow-lg"}`
+              }
+              onClick={() => setActiveTab(tab.label)}
+            ><span className="text-lg">{tab.icon}</span>
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="mt-6 p-6 rounded-2xl bg-basae-200 shadow-md text-gray-700 min-h-20 flex items-center justify-start text-center"
+        >
+          {activeTab === "Slogan" && <p className="text-lg font-semibold">{plant.slogan}</p>}
+          {activeTab === "Provider" && <p className="text-lg font-semibold">{plant.providerName}</p>}
+          {activeTab === "Category" && <p className="text-lg font-semibold">{plant.category}</p>}
+          {activeTab === "Price" && <p className="text-lg font-semibold">{plant.price}</p>}
+          {activeTab === "Rating" && <p className="text-lg font-semibold">{plant.rating} ⭐</p>}
+          {activeTab === "Stock" && <p className="text-lg font-semibold">{plant.availableStock} available</p>}
+        </motion.div>
+      </div>
+
+      <div data-aos="fade-right" className="mt-15 mb-30 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 px-4 md:px-0">
 
         <motion.div
           variants={cardVariants}

@@ -1,7 +1,7 @@
 [
   {
     "plantId": 1,
-    "slogan": "Plant a tree today — breathe better tomorrow.",
+    "slogan": "Breathe Easy, Live Green.",
     "plantName": "Snake Plant",
     "category": "Air Purifier",
     "price": "৳ 1800",
@@ -17,7 +17,7 @@
   },
   {
     "plantId": 2,
-    "slogan": "More trees, more life — let’s grow our future.",
+    "slogan": "Purity in Every Leaf.",
     "plantName": "Peace Lily",
     "category": "Flowering",
     "price": "৳ 2200",
@@ -33,7 +33,7 @@
   },
   {
     "plantId": 3,
-    "slogan": "A tree is the best friend you’ll never outgrow.",
+    "slogan": "Graceful Green for Any Space.",
     "plantName": "Chinese Evergreen",
     "category": "Decorative",
     "price": "৳ 2000",
@@ -49,7 +49,7 @@
   },
   {
     "plantId": 4,
-    "slogan": "Green the Earth, clean the air.",
+    "slogan": "Air Cleaner, Mood Booster.",
     "plantName": "Spider Plant",
     "category": "Hanging",
     "price": "৳ 1600",
@@ -65,7 +65,7 @@
   },
   {
     "plantId": 5,
-    "slogan": "Each tree is a promise for a cooler, brighter planet.",
+    "slogan": "Go Wild, Stay Chic.",
     "plantName": "Monstera Deliciosa",
     "category": "Tropical",
     "price": "৳ 3000",
@@ -81,7 +81,7 @@
   },
   {
     "plantId": 6,
-    "slogan": "Bring nature home — let your space breathe.",
+    "slogan": "Trail Your Way to Green Happiness.",
     "plantName": "Pothos Golden",
     "category": "Vine",
     "price": "৳ 1400",
@@ -97,7 +97,7 @@
   },
   {
     "plantId": 7,
-    "slogan": "Small pots, big impact — grow calm inside.",
+    "slogan": "Healing Nature at Your Fingertips.",
     "plantName": "Aloe Vera",
     "category": "Succulent",
     "price": "৳ 1200",
@@ -113,7 +113,7 @@
   },
   {
     "plantId": 8,
-    "slogan": "Indoor plants, outdoor peace.",
+    "slogan": "Zero Fuss, Full Beauty.",
     "plantName": "ZZ Plant",
     "category": "Low Light",
     "price": "৳ 2500",
@@ -129,7 +129,7 @@
   },
   {
     "plantId": 9,
-    "slogan": "Fresh air, fresh mind — go green indoors.",
+    "slogan": "Strength in Green.",
     "plantName": "Rubber Plant",
     "category": "Foliage",
     "price": "৳ 2800",
