@@ -13,7 +13,7 @@ const TopRated = ({ data }) => {
   
   return (
     <div className='max-w-7xl mx-auto py-30'>
-      <h1 className='font-bold text-xl md:text-2xl text-center'>Top Rated Indoor Plants</h1>
+      <h1 className='font-bold text-xl md:text-4xl text-center'>Top Rated Indoor Plants</h1>
       <div className='flex flex-col md:flex-row justify-center items-center gap-5 py-10'>
         {
           data.slice(-4).map(toprated =>

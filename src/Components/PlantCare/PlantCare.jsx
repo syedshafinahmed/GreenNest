@@ -3,7 +3,7 @@ import React from 'react';
 const PlantCare = ({ data }) => {
   return (
     <div className='max-w-7xl mx-auto py-30'>
-      <h1 className='font-bold text-xl md:text-2xl text-center mb-10'>Plant Care Tips</h1>
+      <h1 className='font-bold text-xl md:text-4xl text-center mb-10'>Plant Care Tips</h1>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-10 md:px-0'>
         {
           data.slice(3, 6).map(plant =>

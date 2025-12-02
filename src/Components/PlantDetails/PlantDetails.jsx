@@ -1,34 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { toast } from 'react-toastify';
+import { motion } from "framer-motion";
+import { FaLeaf, FaTint } from 'react-icons/fa';
+import { GiFertilizerBag } from "react-icons/gi";
 
 const PlantDetails = ({ dataPromise }) => {
   const { id } = useParams();
   const [plant, setPlant] = useState(null);
 
-
-  const [formData, setFormData] = useState({ name: '', email: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const handleChange = (e) => {
-    const { type, value } = e.target;
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [type === 'text' ? 'name' : 'email']: value,
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email) {
+    if (!formData.name || !formData.email || !formData.message) {
       toast.error('Please fill in all fields');
       return;
     }
 
     toast.success('Booking successful!');
-    setFormData({ name: '', email: '' });
+    setFormData({ name: '', email: '', message: '' });
   };
-
 
   useEffect(() => {
     dataPromise
@@ -43,41 +44,123 @@ const PlantDetails = ({ dataPromise }) => {
     return <p className="text-center py-20 text-xl">Loading plant details...</p>;
   }
 
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    // <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5 md:gap-y-0 items-center p-20">
-    //   <img src={plant.image} alt={plant.plantName} className="w-60 md:w-80 h-full object-cover rounded-lg mb-5" />
-    //   <div className='w-60 md:w-80'>
-    //     <h1 className="text-4xl font-black mb-3">{plant.plantName}</h1>
-    //     <p className="mb-3 text-lg text-justify">{plant.description}</p>
-    //     <p><span className='font-bold'>Watering:</span> {plant.watering}</p>
-    //     <p><span className='font-bold'>Sunlight:</span> {plant.sunlight}</p>
-    //     <p><span className='font-bold'>Fertilizing:</span> {plant.fertilizing}</p>
-    //     <p><span className='font-bold'>Price:</span> {plant.price}</p>
-    //     <p><span className='font-bold'>Rating:</span> {plant.rating}</p>
-    //     <p><span className='font-bold'>Care Level:</span> {plant.careLevel}</p>
-    //     <p><span className='font-bold'>Provider:</span> {plant.providerName}</p>
-    //     <p><span className='font-bold'>Stock:</span> {plant.availableStock}</p>
-    //   </div>
+    <div className='max-w-7xl mx-auto py-10'>
+      <div className='flex flex-col md:flex-row items-center gap-10 px-5 md:px-0'>
+        <img
+          className='w-full md:w-1/5 h-80 md:h-96 object-cover rounded-2xl'
+          src={plant.image}
+          alt={plant.plantName}
+        />
+        <div className='w-full md:w-4/5'>
+          <h1 className='text-4xl font-black pb-5'>{plant.plantName}</h1>
+          <p className='text-sm text-gray-600 text-justify'>{plant.description}</p>
+        </div>
+      </div>
 
-    //   <div className="card bg-base-100 w-60 md:w-80 max-w-sm shrink-0 shadow-2xl border border-emerald-700">
-    //     <form onSubmit={handleSubmit} className="card-body">
-    //       <h1 className='text-center text-xl font-bold bg-linear-to-r from-emerald-700 to-lime-600 bg-clip-text text-transparent'>Book Consultation</h1>
-    //       <fieldset className="fieldset">
-    //         <label className="label">Name</label>
-    //         <input type="text" className="input" value={formData.name}
-    //           onChange={handleChange} placeholder="Name" />
-    //         <label className="label">Email</label>
-    //         <input type="email" className="input" value={formData.email}
-    //           onChange={handleChange} placeholder="Email" />
-    //         <button type='submit' className="btn mt-4 bg-linear-to-r from-emerald-700 to-lime-600 text-white">Book Now</button>
-    //       </fieldset>
-    //     </form>
-    //   </div>
-    // </div>
-    <div>
+      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 px-4 md:px-0">
 
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          className="relative w-full md:w-72 p-6 border border-emerald-700 flex flex-col items-center gap-4 rounded-2xl bg-base-200 shadow-lg hover:scale-105 transition-transform duration-300"
+        >
+          <div className="absolute -top-6 p-4 bg-white rounded-full border-2 border-emerald-700 shadow-md">
+            <FaTint className="text-5xl text-emerald-700" />
+          </div>
+          <h2 className="text-4xl font-bold mt-20 text-center text-emerald-700">
+            Watering
+          </h2>
+          <p className="text-gray-600 text-sm text-justify mt-2">{plant.watering}</p>
+        </motion.div>
+
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          className="relative w-full md:w-72 p-6 border border-emerald-700 flex flex-col items-center gap-4 rounded-2xl bg-base-200 shadow-lg hover:scale-105 transition-transform duration-300"
+        >
+          <div className="absolute -top-6 p-4 bg-white rounded-full border-2 border-emerald-700 shadow-md">
+            <FaLeaf className="text-5xl text-emerald-700" />
+          </div>
+          <h2 className="text-4xl font-bold mt-20 text-center text-emerald-700">
+            Sunlight
+          </h2>
+          <p className="text-gray-600 text-sm text-justify mt-2">{plant.sunlight}</p>
+        </motion.div>
+
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          className="relative w-full md:w-72 p-6 border border-emerald-700 flex flex-col items-center gap-4 rounded-2xl bg-base-200 shadow-lg hover:scale-105 transition-transform duration-300"
+        >
+          <div className="absolute -top-6 p-4 bg-white rounded-full border-2 border-emerald-700 shadow-md">
+            <GiFertilizerBag className="text-5xl text-emerald-700" />
+          </div>
+          <h2 className="text-4xl font-bold mt-20 text-center text-emerald-700">
+            Fertilizing
+          </h2>
+          <p className="text-gray-600 text-sm text-justify mt-2">{plant.fertilizing}</p>
+        </motion.div>
+
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          className="relative w-full md:w-72 p-6 border border-emerald-700 flex flex-col items-center gap-4 rounded-2xl bg-base-200 shadow-lg hover:scale-105 transition-transform duration-300"
+        >
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <h1 className="text-center text-4xl text-emerald-700 font-bold py-4">Book Consultation</h1>
+
+            <input
+              type="text"
+              name="name"
+              className="input input-bordered w-full text-black"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Name"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              className="input input-bordered w-full text-black"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Email"
+              required
+            />
+
+            <textarea
+              name="message"
+              className="textarea textarea-bordered w-full text-black"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Your message..."
+              rows={4}
+              required
+            />
+
+            <button
+              type="submit"
+              className="btn text-white bg-linear-to-b from-emerald-700 to-lime-600 hover:scale-105 transition-transform duration-300"
+            >
+              Book Now
+            </button>
+          </form>
+        </motion.div>
+      </div>
     </div>
   );
 };
 
 export default PlantDetails;
+

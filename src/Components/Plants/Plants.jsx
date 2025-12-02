@@ -12,7 +12,7 @@ const Plants = ({ dataPromise }) => {
   }
   return (
     <div className='max-w-7xl mx-auto py-30'>
-      <h1 className='font-bold text-xl md:text-2xl text-center'>All Plants: {data.length}</h1>
+      <h1 className='font-bold text-xl md:text-4xl text-center'>All Plants: {data.length}</h1>
       <div className='grid grid-cols-2 md:grid-cols-4 gap-10 py-10 px-8 md:px-0'>
         {
           data.map(toprated =>

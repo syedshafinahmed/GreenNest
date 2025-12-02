@@ -41,7 +41,7 @@ const GreenExpert = () => {
   return (
     <div className='max-w-7xl mx-auto py-15'>
       <div>
-        <h1 className='font-bold text-xl md:text-2xl text-center mt-20'>Meet Our Green Experts</h1>
+        <h1 className='font-bold text-xl md:text-4xl text-center mt-20'>Meet Our Green Experts</h1>
         <div className='flex flex-col md:flex-row items-center justify-center gap-x-5 pt-15 pb-40 gap-y-10 md:gap-y-0'>
           {experts.map(expert => (
             <div
