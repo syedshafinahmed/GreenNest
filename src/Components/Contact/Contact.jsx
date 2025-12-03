@@ -33,7 +33,7 @@ const Contact = () => {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-24 bg-green-50">
+    <div className="max-w-7xl mx-auto px-6 py-24">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -53,13 +53,13 @@ const Contact = () => {
 
         <motion.div
           data-aos="fade-right"
-          className="flex flex-col items-center md:items-start py-15"
+          className="flex flex-col items-center md:items-start py-15 order-2 md:order-1"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             Stay Connected
           </h2>
 
-          <p className="text-gray-700 mt-3 leading-relaxed max-w-md">
+          <p className="text-gray-700 text-center md:text-start mt-3 leading-relaxed max-w-md">
             Follow GreenNest for the latest plant tips, gardening advice, and sustainable living ideas.
           </p>
 
@@ -85,7 +85,7 @@ const Contact = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.25 }}
           className="bg-white/50 backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl 
-                     border border-white/30 space-y-6"
+                     border border-white/30 space-y-6 order-1 md:order-2"
         >
 
           <FormField

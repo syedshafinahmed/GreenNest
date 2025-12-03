@@ -68,7 +68,7 @@ const PlantDetails = ({ dataPromise }) => {
         </div>
       </div>
 
-      <div data-aos="fade-right" className="mt-10 mx-auto px-5 py-20 md:px-0">
+      <div data-aos="fade-right" className="mt-5 md:mt-10 mx-auto px-5 py-20 md:px-0">
         <div className="flex flex-wrap gap-5 justify-start">
           {[
             { label: "Slogan", icon: <RiVoiceprintFill />, color: "bg-gradient-to-r from-emerald-700 to-lime-600" },
@@ -96,7 +96,7 @@ const PlantDetails = ({ dataPromise }) => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="mt-6 p-6 rounded-2xl bg-basae-200 shadow-md text-gray-700 min-h-20 flex items-center justify-start text-center"
+          className="mt-2 md:mt-6 p-6 rounded-2xl bg-basae-200 shadow-md text-gray-700 min-h-20 flex items-center justify-start text-center"
         >
           {activeTab === "Slogan" && <p className="text-lg font-semibold">{plant.slogan}</p>}
           {activeTab === "Provider" && <p className="text-lg font-semibold">{plant.providerName}</p>}

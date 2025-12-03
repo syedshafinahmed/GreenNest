@@ -105,7 +105,7 @@ const PlantWeek = ({ data }) => {
               transition={{ delay: 0.45 }}
             >
               <InfoItem icon={<FaStar size={40} />} label="Rating" value={`${plant.rating} ⭐`} />
-              <InfoItem icon={<FaTag size={40} />} label="Price" value={plant.price} />
+              <InfoItem icon={<FaTag size={40} />} label="Price" value={`৳ ${plant.price}`} />
               <InfoItem icon={<FaBoxOpen size={40} />} label="Stock" value={plant.availableStock} />
               <InfoItem icon={<MdCategory size={40} />} label="Category" value={plant.category} />
             </motion.div>

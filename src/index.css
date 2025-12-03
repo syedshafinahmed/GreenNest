@@ -20,7 +20,7 @@
   font-style: normal;
 }
 
-nav .active {
+li .active {
   /* color: #65A30D; */
   font-weight: bold;
   padding: 7px 15px;

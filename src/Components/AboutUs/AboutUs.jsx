@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -6,9 +6,6 @@ import { FaLeaf, FaSeedling, FaHandsHelping, FaHome } from "react-icons/fa";
 import { GiFlowers, GiTalk, GiTreeGrowth } from "react-icons/gi";
 
 const AboutUs = () => {
-  // useEffect(() => {
-  //   AOS.init({ duration: 1000, once: true });
-  // }, []);
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-20">
@@ -19,7 +16,7 @@ const AboutUs = () => {
         transition={{ duration: 0.6 }}
         className="text-center mb-16"
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-emerald-700 to-lime-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-extrabold bg-linear-to-r from-emerald-700 to-lime-600 bg-clip-text text-transparent">
           About GreenNest
         </h1>
         <p className="mt-4 text-gray-700 text-lg max-w-2xl mx-auto">
