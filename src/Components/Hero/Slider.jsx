@@ -10,7 +10,7 @@ const Slider = ({ data }) => {
   return (
     <div className='mt-13'>
       <main>
-        <div className='max-w-7xl h-[70vh] mx-auto pt-4 mb-30 px-5'>
+        <div className='max-w-7xl h-[70vh] mx-auto pt-4 px-5'>
           <Swiper className="slider" modules={[Pagination, Autoplay]}
             spaceBetween={20}
             slidesPerView={4}

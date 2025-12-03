@@ -12,7 +12,7 @@ const TopRated = ({ data }) => {
   }
 
   return (
-    <div data-aos="fade-right" className='max-w-7xl mx-auto py-30'>
+    <div data-aos="fade-right" className='max-w-7xl mx-auto pb-5 pt-20 md:pb-30 md:pt-30'>
       <h1 className='font-bold text-xl md:text-4xl text-center'>Top Rated Indoor Plants</h1>
       <div className='flex flex-col md:flex-row justify-center items-center gap-5 py-10'>
         {
@@ -35,8 +35,8 @@ const TopRated = ({ data }) => {
                 transition={{ duration: 0.5 }}
               />
               <div className='p-5'>
-                <p className='font-bold text-xl py-4'>{toprated.plantName}</p>
-                <div className='flex gap-3 items-center pb-5'>
+                <p className='font-bold text-xl pb-2'>{toprated.plantName}</p>
+                <div className='flex gap-3 items-center pb-2'>
                   <span className='flex items-center text-xs badge badge-xs text-emerald-700 bg-white border-emerald-700 font-medium py-2'>
                     <FaTag />৳ {toprated.price}
                   </span>

@@ -37,7 +37,7 @@ const PlantCare = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-extrabold text-center mb-22"
+        className="text-2xl md:text-5xl font-extrabold text-center mb-22"
       >
         Plant Care Essentials
       </motion.h1>
@@ -57,7 +57,7 @@ const PlantCare = () => {
             </div>
 
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-gray-900 mb-3">{item.title}</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">{item.title}</h2>
               <p className="text-gray-700">{item.description}</p>
             </div>
           </motion.div>

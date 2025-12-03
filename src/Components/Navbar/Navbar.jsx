@@ -41,7 +41,7 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-64 p-2 shadow">
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-auto p-2 shadow">
                 {links}
               </ul>
             </div>
@@ -79,8 +79,8 @@ const Navbar = () => {
                 </ul>
               </div>) :
                 (<div className='flex gap-x-2 md:gap-x-5'>
-                  <NavLink to="/login"><button className="btn text-xs w-20 border-none bg-linear-to-r from-emerald-700 to-lime-600 text-white hover:scale-105 transition">Login</button></NavLink>
-                  <NavLink to="/register"><button className="btn text-xs w-20 border-none bg-linear-to-r from-emerald-700 to-lime-600 text-white hover:scale-105 transition">Register</button></NavLink>
+                  <NavLink to="/login"><button className="btn btn-xs md:btn md:btn-sm text-xs font-light w-20 border-none bg-linear-to-r from-emerald-700 to-lime-600 text-white hover:scale-105 transition">Login</button></NavLink>
+                  <NavLink to="/register"><button className="btn btn-xs md:btn md:btn-sm text-xs font-light w-20 border-none bg-linear-to-r from-emerald-700 to-lime-600 text-white hover:scale-105 transition">Register</button></NavLink>
                 </div>)
             }
 
