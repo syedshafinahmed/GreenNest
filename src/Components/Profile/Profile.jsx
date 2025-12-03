@@ -125,7 +125,7 @@ const Profile = () => {
 
             <motion.button
               type="submit"
-              className="w-full py-3 btn bg-emerald-600 text-white rounded-lg font-bold"
+              className="w-full py-3 btn  bg-emerald-600 text-white rounded-lg font-light"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

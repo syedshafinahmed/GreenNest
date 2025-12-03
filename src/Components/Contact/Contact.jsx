@@ -115,7 +115,7 @@ const Contact = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="w-full py-3 font-bold text-white rounded-xl bg-linear-to-r 
+            className="w-full btn font-light py-3  text-white rounded-xl bg-linear-to-r 
                        from-emerald-700 to-lime-600 shadow-lg tracking-wide"
           >
             Send Message

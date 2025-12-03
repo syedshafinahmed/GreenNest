@@ -36,17 +36,17 @@ const TopRated = ({ data }) => {
               />
               <div className='p-5'>
                 <p className='font-bold text-xl py-4'>{toprated.plantName}</p>
-                <div className='flex justify-between items-center pb-5'>
-                  <span className='flex items-center text-xs badge text-emerald-700 bg-white border-emerald-700 font-medium gap-x-2'>
-                    <FaTag /> {toprated.price}
+                <div className='flex gap-3 items-center pb-5'>
+                  <span className='flex items-center text-xs badge badge-xs text-emerald-700 bg-white border-emerald-700 font-medium py-2'>
+                    <FaTag />৳ {toprated.price}
                   </span>
-                  <span className='flex items-center text-xs badge text-lime-600 bg-white border-lime-600 font-medium gap-x-2'>
+                  <span className='flex items-center text-xs badge badge-xs text-emerald-700 bg-white border-emerald-700 font-medium py-2'>
                     <IoIosStar /> {toprated.rating}
                   </span>
                 </div>
                 <button
                   onClick={() => handleDetails(toprated.plantId)}
-                  className='btn w-full bg-linear-to-r from-emerald-700 to-lime-600 text-white'
+                  className='btn btn-sm font-light w-full bg-linear-to-r from-emerald-700 to-lime-600 text-white'
                 >
                   View Details
                 </button>

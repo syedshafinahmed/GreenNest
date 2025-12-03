@@ -101,7 +101,7 @@ const PlantDetails = ({ dataPromise }) => {
           {activeTab === "Slogan" && <p className="text-lg font-semibold">{plant.slogan}</p>}
           {activeTab === "Provider" && <p className="text-lg font-semibold">{plant.providerName}</p>}
           {activeTab === "Category" && <p className="text-lg font-semibold">{plant.category}</p>}
-          {activeTab === "Price" && <p className="text-lg font-semibold">{plant.price}</p>}
+          {activeTab === "Price" && <p className="text-lg font-semibold">৳ {plant.price}</p>}
           {activeTab === "Rating" && <p className="text-lg font-semibold">{plant.rating} ⭐</p>}
           {activeTab === "Stock" && <p className="text-lg font-semibold">{plant.availableStock} available</p>}
         </motion.div>
@@ -195,7 +195,7 @@ const PlantDetails = ({ dataPromise }) => {
 
             <button
               type="submit"
-              className="btn text-white bg-linear-to-b from-emerald-700 to-lime-600 hover:scale-105 transition-transform duration-300"
+              className="btn text-white font-light bg-linear-to-b from-emerald-700 to-lime-600 hover:scale-105 transition-transform duration-300"
             >
               Book Now
             </button>
