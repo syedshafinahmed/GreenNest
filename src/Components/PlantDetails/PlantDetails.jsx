@@ -118,7 +118,7 @@ const PlantDetails = ({ dataPromise }) => {
           <div className="absolute -top-6 p-4 bg-white rounded-full border-2 border-emerald-700 shadow-md">
             <FaTint className="text-5xl text-emerald-700" />
           </div>
-          <h2 className="text-4xl font-bold mt-20 text-center text-emerald-700">
+          <h2 className="text-3xl font-bold mt-15 text-center text-emerald-700">
             Watering
           </h2>
           <p className="text-gray-600 text-sm text-justify mt-2">{plant.watering}</p>
@@ -133,7 +133,7 @@ const PlantDetails = ({ dataPromise }) => {
           <div className="absolute -top-6 p-4 bg-white rounded-full border-2 border-emerald-700 shadow-md">
             <FaSun className="text-5xl text-emerald-700" />
           </div>
-          <h2 className="text-4xl font-bold mt-20 text-center text-emerald-700">
+          <h2 className="text-3xl font-bold mt-15 text-center text-emerald-700">
             Sunlight
           </h2>
           <p className="text-gray-600 text-sm text-justify mt-2">{plant.sunlight}</p>
@@ -148,7 +148,7 @@ const PlantDetails = ({ dataPromise }) => {
           <div className="absolute -top-6 p-4 bg-white rounded-full border-2 border-emerald-700 shadow-md">
             <GiFertilizerBag className="text-5xl text-emerald-700" />
           </div>
-          <h2 className="text-4xl font-bold mt-20 text-center text-emerald-700">
+          <h2 className="text-3xl font-bold mt-15 text-center text-emerald-700">
             Fertilizing
           </h2>
           <p className="text-gray-600 text-sm text-justify mt-2">{plant.fertilizing}</p>
@@ -161,7 +161,7 @@ const PlantDetails = ({ dataPromise }) => {
           className="relative w-full md:w-72 p-6 border border-emerald-700 flex flex-col items-center gap-4 rounded-2xl bg-base-200 shadow-lg hover:scale-105 transition-transform duration-300"
         >
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-            <h1 className="text-center text-4xl text-emerald-700 font-bold py-4">Book Consultation</h1>
+            <h1 className="text-center text-3xl text-emerald-700 font-bold py-4">Book Consultation</h1>
 
             <input
               type="text"

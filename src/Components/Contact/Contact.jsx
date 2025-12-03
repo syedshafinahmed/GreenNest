@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaGithub, FaLinkedinIn, FaInstagram, FaGlobe } from "react-icons/fa";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Contact = () => {
-  const FormField = ({ label, type, placeholder }) => (
+  const { user } = useContext(AuthContext);
+
+  const FormField = ({ label, type, placeholder, defaultValue }) => (
     <div className="flex flex-col">
       <label className="font-semibold text-gray-900 mb-2">{label}</label>
       <input
         type={type}
         placeholder={placeholder}
+        defaultValue={defaultValue}
         className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 
                    focus:border-emerald-700 outline-none transition shadow-sm"
       />
@@ -27,7 +31,6 @@ const Contact = () => {
       {children}
     </motion.a>
   );
-
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-24 bg-green-50">
@@ -84,8 +87,20 @@ const Contact = () => {
           className="bg-white/50 backdrop-blur-xl px-8 py-10 rounded-2xl shadow-2xl 
                      border border-white/30 space-y-6"
         >
-          <FormField label="Full Name" type="text" placeholder="Your Name" />
-          <FormField label="Email Address" type="email" placeholder="Your Email" />
+
+          <FormField
+            label="Full Name"
+            type="text"
+            placeholder="Your Name"
+            defaultValue={user?.displayName || ""}
+          />
+
+          <FormField
+            label="Email Address"
+            type="email"
+            placeholder="Your Email"
+            defaultValue={user?.email || ""}
+          />
 
           <div className="flex flex-col">
             <label className="font-semibold text-gray-900 mb-2">Message</label>
