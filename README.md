@@ -48,8 +48,8 @@ npm run build
 
 ## Home Page
 
-<img width="full" alt="Greennest-Home" src="https://github.com/user-attachments/assets/5dde2c25-5f8f-4466-bbd7-2dd650842595" /><br>
-<!-- <img width="1351" height="3689" alt="greennest-syedshafinahmed pages dev_" src="https://github.com/user-attachments/assets/5dde2c25-5f8f-4466-bbd7-2dd650842595" /> -->
+<img width="full" alt="GreenNest" src="https://github.com/user-attachments/assets/bd25a66d-60df-44a2-91e6-f4d3df0eef24" /><br>
+
 
 
 - Nature-inspired hero slider using **Swiper.js**.
@@ -62,7 +62,7 @@ npm run build
 
 ## Plants Page
 
-<img width="full" alt="Greennest-Plants" src="https://github.com/user-attachments/assets/d3bb5354-e6e3-4111-ada4-6766822426e8" /><br>
+<img width="full" alt="Greennest-Plants" src="https://github.com/user-attachments/assets/2875f097-aded-4cd2-9d2d-2a760f7accc4" /><br>
 
 
 - Displays all plant data from **plants.json**.
@@ -72,25 +72,23 @@ npm run build
 
 ---
 
-## Plant Details Page (Protected Route)
+## Plant Details Page 
 
-<img width="full" alt="Greennest-PlantDetails" src="https://github.com/user-attachments/assets/ed5ce3ba-3b8e-408d-8ab5-8dcd1acaa10d" /> <br>
+<img width="full" alt="Greennest-PlantDetails" src="https://github.com/user-attachments/assets/52c40fd3-2351-491d-ba53-2ef066614fb4" /> <br>
 
-- Only accessible when **logged in**.
+
 - Shows **full plant details** including care instructions and provider.
 - **Book Consultation Form** with Name + Email input.
 - On successful booking, a confirmation toast is displayed and the form resets automatically.
 
-
-*If the user is not logged in → Redirects to Login and then back to Details Page after login.*
 
 ---
 
 ## Authentication (Firebase)
 
 <div align="center">
-  <img alt="Greennest-Register" src="https://github.com/user-attachments/assets/2ae9414b-45dd-46f7-ba23-da59945ea67c" style="width: 44%"  /> &nbsp;&nbsp;
-  <img alt="Greennest-Login" src="https://github.com/user-attachments/assets/d099bd60-fff0-47fa-afaa-f769e38df4db" style="width: 44%"  />  
+<img alt="Greennest-Register" src="https://github.com/user-attachments/assets/4b052ceb-d7b5-423b-824d-dc7bd2d32dd8" style="width: 44%" /> &nbsp;&nbsp;
+<img alt="Greennest-Login" src="https://github.com/user-attachments/assets/9a511640-084d-4407-a3ce-01945636ffc2" style="width: 44%" />  
 </div> <br>
 
 - **Email/Password Login**
@@ -105,35 +103,58 @@ npm run build
 
 ---
 
-## Profile Page
+## Profile Page (Protected Route)
 
-<div align="center">
-  <img alt="Greennest-Profile" src="https://github.com/user-attachments/assets/8e5ca97a-a3d3-4d6d-aa7c-ac5c4b68a0fb" style="width: 30%" /> &nbsp;&nbsp;
-  <img alt="Greennest-Profile-Edit" src="https://github.com/user-attachments/assets/761e8686-a02e-471c-ab7e-ec716dfe5ddb" style="width: 30%" /> &nbsp;&nbsp;
-  <img alt="Greennest-Profile-Update" src="https://github.com/user-attachments/assets/e9b604cd-5b62-43b2-9454-654a22ab95ff" style="width: 30%" />
-</div>
-
-<br>
+<img width="full" alt="Greennest-Profile" src="https://github.com/user-attachments/assets/337c87f9-d32a-4b77-87b8-bd1620cde3aa" /><br>
 
 - Shows **Name, Email, Photo** of logged-in user.
 - **Update Profile** feature using `updateProfile()` to change name or photo.
 - Real-time UI updates after profile change.
 
+*Only Logged in users can access this page*
+
 ---
+
+
+## Contact Page
+
+<img width="full" alt="Greennest-Contact" src="https://github.com/user-attachments/assets/399921ad-15a8-4115-b911-fd0c0a9d314e" /> <br>
+
+- Includes **social media** links with hover animations.
+- **Pre-fills user info** if logged in for convenience.
+
+---
+
+
+## About Us Page
+
+<img width="full" alt="Greennest-About Us" src="https://github.com/user-attachments/assets/8de94dd8-767c-4f97-959a-0db47b44c29b" /><br>
+
+- Showcases GreenNest’s mission and values.
+- Highlights **sustainability practices, and newsletter signup**.
+
+---
+
+
+
+
+
+
 
 ## 🧰 Tech Stack
 
-| 🏷️ **Category**         | ⚙️ **Technology Used**                                                                                           |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| **Library**             | [React.js](https://react.dev/)                                                                                   |
-| **Styling**             | [Tailwind CSS](https://tailwindcss.com/) + [daisyUI](https://daisyui.com/)                                       |
-| **Routing**             | [React Router](https://reactrouter.com/)                                                                         |
-| **Authentication**      | [Firebase Authentication](https://firebase.google.com/docs/auth)                                                 |
-| **Animations / Slider** | [Swiper.js](https://swiperjs.com/)                                                                               |
-| **Toasts**              | [React Toastify](https://fkhadra.github.io/react-toastify/introduction)                                          |
-| **Data Source**         | Local JSON (`plants.json`)                                                                                       |
-| **State Management**    | React Hooks (`useState`, `useEffect`, `useContext`)                                                              |
-| **Deployment**          | [Firebase Hosting](https://firebase.google.com/docs/hosting) / [Cloudflare Pages](https://pages.cloudflare.com/) |
+| 🏷️ **Category**        | ⚙️ **Technology Used**                                                                                                          |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Library**             | [React.js](https://react.dev/)                                                                                                  |
+| **Styling**             | [Tailwind CSS](https://tailwindcss.com/) + [daisyUI](https://daisyui.com/)                                                      |
+| **Routing**             | [React Router](https://reactrouter.com/)                                                                                        |
+| **Authentication**      | [Firebase Authentication](https://firebase.google.com/docs/auth)                                                                |
+| **Animations / Slider** | [Swiper.js](https://swiperjs.com/) + [Framer Motion](https://www.framer.com/motion/) + [AOS](https://michalsnik.github.io/aos/) |
+| **Toasts**              | [React Toastify](https://fkhadra.github.io/react-toastify/introduction)                                                         |
+| **Data Source**         | Local JSON (`plants.json`)                                                                                                      |
+| **State Management**    | React Hooks (`useState`, `useEffect`, `useContext`)                                                                             |
+| **Deployment**          | [Firebase Hosting](https://firebase.google.com/docs/hosting) / [Cloudflare Pages](https://pages.cloudflare.com/)                |
+
 
 ---
 
